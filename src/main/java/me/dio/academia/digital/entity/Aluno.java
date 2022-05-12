@@ -32,7 +32,7 @@ public class Aluno {
 
   private LocalDate dataDeNascimento;
 
-  @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
+  @OneToMany(mappedBy = "aluno", cascade = CascadeType.REMOVE , fetch = FetchType.LAZY)
   @JsonIgnore
   private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
 
