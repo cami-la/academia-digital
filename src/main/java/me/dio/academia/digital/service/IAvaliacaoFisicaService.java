@@ -19,7 +19,7 @@ public interface IAvaliacaoFisicaService {
    * @param id - id da Avaliação Física que será exibida.
    * @return - Avaliação Física de acordo com o Id fornecido.
    */
-  AvaliacaoFisica get(Long id);
+  AvaliacaoFisica get(Long id) throws Exception;
 
   /**
    * Retorna todas as Avaliações Física que estão no banco de dados.
@@ -34,7 +34,7 @@ public interface IAvaliacaoFisicaService {
    * Física no banco de dados.
    * @return - Avaliação Física recém-atualizada.
    */
-  AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateForm formUpdate);
+  AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateForm formUpdate) throws Exception;
 
   /**
    * Deleta uma Avaliação Física específica.

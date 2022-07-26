@@ -1,6 +1,7 @@
 package me.dio.academia.digital.service;
 
 import me.dio.academia.digital.entity.Aluno;
+import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
 import me.dio.academia.digital.entity.form.AlunoUpdateForm;
 
@@ -19,7 +20,7 @@ public interface IAlunoService {
    * @param id - id do Aluno que será exibido.
    * @return - Aluno de acordo com o Id fornecido.
    */
-  Aluno get(Long id);
+  Aluno get(Long id) throws Exception;
 
   /**
    * Retorna todos os Alunos que estão no banco de dados.
@@ -34,11 +35,14 @@ public interface IAlunoService {
    * no banco de dados.
    * @return - Aluno recém-atualizado.
    */
-  Aluno update(Long id, AlunoUpdateForm formUpdate);
+  Aluno update(Long id, AlunoUpdateForm formUpdate) throws Exception;
 
   /**
    * Deleta um Aluno específico.
    * @param id - id do Aluno que será removido.
    */
   void delete(Long id);
+
+  List<AvaliacaoFisica> getAllAvaliacaoFisicaID(Long id) throws Exception;
 }
+
