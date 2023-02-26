@@ -3,9 +3,8 @@ package me.dio.academia.digital.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,6 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "tb_avaliacoes")
 public class AvaliacaoFisica {
+  
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -24,10 +24,9 @@ public class AvaliacaoFisica {
 
   private LocalDateTime dataDaAvaliacao = LocalDateTime.now();
 
-  @Column(name="peso_atual")
+  @Column(name= "peso_atual")
   private double peso;
 
-  @Column(name="altura_atual")
+  @Column(name= "altura_atual")
   private double altura;
-
 }
