@@ -6,6 +6,7 @@ import me.dio.academia.digital.entity.form.MatriculaForm;
 import java.util.List;
 
 public interface IMatriculaService {
+
   /**
    * Cria uma Matrícula e salva no banco de dados.
    * @param form - formulário referente aos dados para criação da Matrícula no banco de dados.
@@ -18,7 +19,7 @@ public interface IMatriculaService {
    * @param id - id da Matrícula que será exibida.
    * @return - Matrícula de acordo com o Id fornecido.
    */
-  Matricula get(Long id);
+  Matricula getById(Long id);
 
   /**
    * Retorna todas as Matrículas que estão no banco de dados.
@@ -31,5 +32,4 @@ public interface IMatriculaService {
    * @param id - id da Matrícula que será removida.
    */
   void delete(Long id);
-
 }
